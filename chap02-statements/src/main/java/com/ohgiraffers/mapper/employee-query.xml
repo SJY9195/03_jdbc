@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+    <entry key="selectEmpByName">
+        SELECT
+            E.EMP_ID,
+            E.EMP_NAME,
+            J.JOB_NAME
+        FROM EMPLOYEE E
+        JOIN JOB J ON E.JOB_CODE = J.JOB_CODE  <!-- JOIN ON  ON은 JOIN에 조건을 걸어주는 명령어이다! = 는 E.JOB_CODE와 J.JOB_CODE가 같다는 게 아니라 둘다 갖고 있는 CODE를 출력해주겠다는뜻! -->
+        WHERE E.EMP_NAME LIKE CONCAT(?, '%')
+
+    </entry>
+
+
+
+</properties>
